@@ -5,5 +5,5 @@ resource "random_string" "random" {
 }
 
 ouput "result" {
-value = resource.random_string.random.string
+value = random_string.random.string
 }
