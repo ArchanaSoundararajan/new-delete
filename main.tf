@@ -4,6 +4,6 @@ resource "random_string" "random" {
   override_special = "/@£$"
 }
 
-ouput "result" {
+output "result" {
 value = random_string.random.string
 }
