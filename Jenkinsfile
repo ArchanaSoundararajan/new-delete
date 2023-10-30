@@ -43,16 +43,6 @@ pipeline {
             }
         }
 
-        stage('Terraform Upload') {
-            steps {
-                script {
-                    // Upload Terraform state to Terraform Enterprise
-                    sh "terraform push -name=${TFE_WORKSPACE} -vcs-repo=${TFE_ORG}/${JOB_NAME}"
-                }
-            }
-        }
-    }
-
     post {
         always {
             // Clean up Terraform files
